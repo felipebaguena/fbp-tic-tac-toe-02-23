@@ -1,0 +1,25 @@
+body {
+    background-color: brown;
+}
+
+.game-main {
+    background-color: blanchedalmond;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabletop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: fit-content;
+    height: fit-content;
+}
+
+.square {
+    background-color: rgb(129, 129, 129);
+    height: 100px;
+    width: 100px;
+    border: outset 3px gray;
+}
