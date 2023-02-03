@@ -3,22 +3,19 @@ body {
 }
 
 .landing-topper {
-    height: 20vh;
+    height: 25vh;
 }
 
 .landing-topper-text-box {
-    height: 100%;
+    height: 90%;
+}
+
+.landing-upper-logo {
+    height: 90%;
 }
 
 .color-txt {
-color: #42032C;
-}
-
-
-.landing-topper-txt {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: xx-large;
+    color: #42032C;
 }
 
 .landing-main {
@@ -26,15 +23,17 @@ color: #42032C;
 }
 
 .logo-ini {
-    width: 300px;
+    width: 260px;
 }
 
 .landing-footer {
-    height: 30vh;
+    height: 25vh;
 }
 
 .button-landing {
     width: 90%;
+    font-family: 'VT323', monospace;
+    font-size: x-large;
     background-color: #42032C;
     color: #F1EFDC;
     border: #8d0f61 2px outset;
