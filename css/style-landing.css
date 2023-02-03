@@ -1,11 +1,53 @@
 body {
-    background-color: aquamarine;
+    background-color: #F1EFDC;
 }
 
-.box1 {
-    height: 100vh;
+.landing-topper {
+    height: 20vh;
+}
+
+.landing-topper-text-box {
+    height: 100%;
+}
+
+.color-txt {
+color: #42032C;
+}
+
+
+.landing-topper-txt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.landing-main {
+    height: 50vh;
 }
 
 .logo-ini {
     width: 300px;
+}
+
+.landing-footer {
+    height: 30vh;
+}
+
+.button-landing {
+    width: 90%;
+    background-color: #42032C;
+    color: #F1EFDC;
+    border: #8d0f61 2px outset;
+}
+
+.button-landing:hover {
+    width: 90%;
+    background-color: #731251;
+    color: #ffffff;
+    border: #8d0f61 2px outset;
+    box-shadow: 1px 1px 4px 1px #7c4268;
+}
+
+.button-landing:active {
+    background-color: #9a136b !important;
 }
