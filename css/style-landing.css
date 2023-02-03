@@ -7,7 +7,7 @@ body {
 }
 
 .landing-topper-text-box {
-    height: 90%;
+    height: 100%;
 }
 
 .landing-upper-logo {
@@ -31,7 +31,7 @@ body {
 }
 
 .button-landing {
-    width: 90%;
+    width: 85%;
     font-family: 'VT323', monospace;
     font-size: x-large;
     background-color: #42032C;
@@ -40,7 +40,7 @@ body {
 }
 
 .button-landing:hover {
-    width: 90%;
+
     background-color: #731251;
     color: #ffffff;
     border: #8d0f61 2px outset;
