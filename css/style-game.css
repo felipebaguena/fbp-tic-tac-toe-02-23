@@ -1,0 +1,115 @@
+body {
+    background-color: #F1EFDC;
+}
+
+.landing-topper {
+    height: 25vh;
+}
+
+.landing-topper-text-box {
+    height: 100%;
+}
+
+.landing-upper-logo {
+    height: 90%;
+}
+
+.color-txt {
+    color: #42032C;
+}
+
+
+
+
+.vampire-avatar-2-img {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.txt-players{
+    font-family: 'VT323', monospace;
+    font-size: x-large;
+}
+
+
+
+
+
+/* /// PÁGINA DE JUEGO /// */
+
+.tabletop {
+    background-image: url(../img/board-1.png);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 300px;
+    width: 300px;
+}
+
+.game-board-box {
+    height: 75vh;
+}
+
+.avatar-pixel-2 {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+}
+
+.central-game-tabletop {
+        height: 55vh;
+}
+
+
+/* /// MEDIAS /// */
+
+@media (min-width: 492px) {
+
+    .vampire-avatar-2-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .txt-players {
+        font-size: xx-large;
+    }
+
+} 
+
+
+@media (min-width: 992px) {
+
+    .button-landing {
+        width: 35%;
+    }
+
+    .txt-players {
+        font-size: xx-large;
+    }
+
+    .central-selection-player-lg {
+        width: 40%;
+    }
+
+    .tabletop {
+        height: 400px;
+        width: 400px;
+    }
+
+    .central-game-tabletop {
+        height: 75vh;
+    }
+
+    .vampire-avatar-2-img {
+        height: 160px;
+        width: 160px;
+    }
+
+    .avatar-pixel-2 {
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+    }
+
+}

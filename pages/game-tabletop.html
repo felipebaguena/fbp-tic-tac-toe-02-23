@@ -16,7 +16,7 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../css/style-landing.css">
+    <link rel="stylesheet" href="../css/style-game.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,14 +26,19 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 landing-topper landing-topper-home">
+            <div class="col-12 landing-topper">
                 <div class="landing-topper-text-box d-flex justify-content-center align-items-center">
                     <a class="landing-upper-logo pt-1" href="../index.html"><img class="landing-upper-logo pt-1" src="../img/tictactoe-upper-logo-5.png" alt="ttt-logo-1"></a>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center align-items-center flex-column game-board-box">
-                <label for="formGroupExampleInput" class="form-label txt-players"><img src="../img/vampire-avatar-2.png" class="vampire-avatar-2-img" alt="v-avatar-2"> TURNOS RESTANTES:</label>
-                <div class="col-12 tabletop text-center">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-3 d-flex justify-content-center avatar-pixel-2">
+                <img src="../img/vampire-avatar-2.png" class="vampire-avatar-2-img" alt="v-avatar-2">
+                <p class="form-label txt-players">TURNOS RESTANTES:</p>
+            </div>
+            <div class="col-12 col-lg-6 central-game-tabletop d-flex align-items-center justify-content-center">
+            <div class="tabletop text-center">
                     <div class="square square-1">1</div>
                     <div class="square square-2">2</div>
                     <div class="square square-3">3</div>
@@ -43,8 +48,10 @@
                     <div class="square square-7">7</div>
                     <div class="square square-8">8</div>
                     <div class="square square-9">9</div>
-                </div>
-                <label for="formGroupExampleInput2" class="form-label txt-players"><img src="../img/werewolf-avatar-2.png" class="vampire-avatar-2-img" alt="v-avatar-2"> TURNOS RESTANTES:</label>
+            </div>
+            </div>
+            <div class="col-12 col-lg-3 d-flex justify-content-center avatar-pixel-2">
+                <img src="../img/werewolf-avatar-2.png" class="vampire-avatar-2-img" alt="v-avatar-2"><p class="form-label txt-players">TURNOS RESTANTES:</p>
             </div>
         </div>
     </div>
