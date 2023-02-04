@@ -50,3 +50,8 @@ body {
 .button-landing:active {
     background-color: #9a136b !important;
 }
+
+.txt-players{
+    font-family: 'VT323', monospace;
+    font-size: x-large;
+}

@@ -5,14 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tres en raya</title>
-    <link rel="stylesheet" href="../css/style-home.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"/>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/style-landing.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
 </head>
 <body>
-
-    <div class="main-body">
-        <div class="selector1"></div>
-        <div class="selector2"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 landing-topper">
+                <div class="landing-topper-text-box d-flex justify-content-center align-items-center">
+                    <img class="landing-upper-logo pt-1" src="../img/tictactoe-upper-logo-5.png" alt="ttt-logo-1">
+                </div>
+            </div>
+            <div class="col-12 landing-main d-flex justify-content-center align-items-center flex-column">
+                <p class="txt-players fs-1">ELIGE TU FACCIÓN</p>
+                <div class="mb-3 text-center">
+                    <label for="formGroupExampleInput" class="form-label txt-players">VAMPIROS</label>
+                    <input type="text" class="form-control txt-players" id="formGroupExampleInput" placeholder="Introduce tu nombre">
+                </div>
+                <div class="mb-3 text-center">
+                    <label for="formGroupExampleInput2" class="form-label txt-players">HOMBRES LOBO</label>
+                    <input type="text" class="form-control txt-players" id="formGroupExampleInput2" placeholder="Introduce tu nombre">
+                </div>
+            </div>
+            <div class="col-12 landing-footer d-flex flex-column align-items-center justify-content-center gap-2">
+                <a class="btn btn-danger button-landing" href="#" role="button">JUGAR</a>
+            </div>
+        </div>
     </div>
 
+    
 </body>
 </html>
