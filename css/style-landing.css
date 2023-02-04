@@ -120,3 +120,23 @@ border-bottom: #42032C 1px solid;
 .game-board-box {
     height: 75vh;
 }
+
+/* /// MEDIAS /// */
+
+@media (min-width: 600px) {
+
+    .button-landing {
+        width: 55%;
+    }
+}
+
+@media (min-width: 900px) {
+
+    .button-landing {
+            width: 35%;
+    }
+
+    .logo-ini {
+        width: 350px;
+    }
+}
