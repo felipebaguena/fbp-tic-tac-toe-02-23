@@ -40,6 +40,15 @@ body {
     width: 300px;
 }
 
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 50px;
+}
+
 .game-board-box {
     height: 75vh;
 }
