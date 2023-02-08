@@ -5,6 +5,7 @@ let turno = true;
 
 let fichaP1 = 3;
 let fichaP2 = 3;
+let fichasColocadas = 0;
 
 let miTablero = ["","","","","","","","",""];
 
@@ -41,14 +42,14 @@ tablero.map(
 
             if (juegoFinalizado) return;
 
-            if (celda.innerHTML === "X" && turno == true && fichaRetirada === false) {
+            if (celda.innerHTML === "X" && turno == true && fichaRetirada === false && fichasColocadas >= 6) {
 
                 celda.innerHTML = "";
                 miTablero[celda.id] = "";
                 fichaP1++;
                 fichaRetirada = true;
 
-            } else if (celda.innerHTML === "O" && turno !== true && fichaRetirada === false) {
+            } else if (celda.innerHTML === "O" && turno !== true && fichaRetirada === false && fichasColocadas >= 6) {
 
                 celda.innerHTML = "";
                 miTablero[celda.id] = "";
@@ -62,6 +63,7 @@ tablero.map(
                 miTablero[celda.id] = (turno) ? "X" : "O";
                 comprueboGanador();
                 turno = !turno;
+                fichasColocadas++;
                 fichaRetirada = false;
             }
         });          
