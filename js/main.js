@@ -63,3 +63,54 @@ tablero.map(
         });          
     }
 )
+
+//SESSION STORAGE//
+
+
+document.getElementById("player1-name").addEventListener("input", () => {
+
+    let value = document.getElementById("player1-name").value;
+
+    if (value.length === 0) {
+    sessionStorage.removeItem("player1");
+
+    } else {
+        
+        if (value.length > 20) {
+        value = value.substr(0, 20);
+        document.getElementById("player1-name").value = value;
+        }
+        if (!/^[a-zA-Z]+$/.test(value)) {
+        document.getElementById("player1-name").placeholder = "Introduce letras";
+        document.getElementById("player1-name").value = "";
+        value = "";
+        } else {
+        document.getElementById("player1-name").placeholder = "Escribe tu nombre";
+        sessionStorage.setItem("player1", value);
+        }
+    }
+});
+    
+document.getElementById("player2-name").addEventListener("input", () => {
+
+    let value = document.getElementById("player2-name").value;
+
+    if (value.length === 0) {
+    sessionStorage.removeItem("player2");
+
+    } else {
+
+        if (value.length > 20) {
+        value = value.substr(0, 20);
+        document.getElementById("player2-name").value = value;
+        }
+        if (!/^[a-zA-Z]+$/.test(value)) {
+        document.getElementById("player2-name").placeholder = "Introduce letras";
+        document.getElementById("player2-name").value = "";
+        value = "";
+        } else {
+        document.getElementById("player2-name").placeholder = "Escribe tu nombre";
+        sessionStorage.setItem("player2", value);
+        }
+    }
+});
