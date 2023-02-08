@@ -9,6 +9,7 @@ let fichaP2 = 3;
 let miTablero = ["","","","","","","","",""];
 
 let juegoFinalizado = false;
+let fichaRetirada = false;
 
 let combinacionGanadora = [
     [0, 1, 2],
@@ -40,17 +41,19 @@ tablero.map(
 
             if (juegoFinalizado) return;
 
-            if (celda.innerHTML === "X" && turno == true) {
+            if (celda.innerHTML === "X" && turno == true && fichaRetirada === false) {
 
                 celda.innerHTML = "";
                 miTablero[celda.id] = "";
                 fichaP1++;
+                fichaRetirada = true;
 
-            } else if (celda.innerHTML === "O" && turno !== true) {
+            } else if (celda.innerHTML === "O" && turno !== true && fichaRetirada === false) {
 
                 celda.innerHTML = "";
                 miTablero[celda.id] = "";
                 fichaP2++;
+                fichaRetirada = true;
 
             } else if((celda.innerHTML === "") && (fichaP1 > 0 || fichaP2 > 0)){
             
@@ -59,6 +62,7 @@ tablero.map(
                 miTablero[celda.id] = (turno) ? "X" : "O";
                 comprueboGanador();
                 turno = !turno;
+                fichaRetirada = false;
             }
         });          
     }
@@ -110,3 +114,4 @@ inputs.map((input) => {
         console.log(player1, player2);
     });
 });
+
