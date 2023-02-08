@@ -67,50 +67,46 @@ tablero.map(
 //SESSION STORAGE//
 
 
-document.getElementById("player1-name").addEventListener("input", () => {
+let player1 = {
+    name: ''
+};
 
-    let value = document.getElementById("player1-name").value;
+let player2 = {
+    name: ''
+};
 
-    if (value.length === 0) {
-    sessionStorage.removeItem("player1");
+let inputs = Array.from(document.getElementsByTagName("input"));
 
-    } else {
-        
-        if (value.length > 20) {
-        value = value.substr(0, 20);
-        document.getElementById("player1-name").value = value;
-        }
-        if (!/^[a-zA-Z]+$/.test(value)) {
-        document.getElementById("player1-name").placeholder = "Introduce letras";
-        document.getElementById("player1-name").value = "";
-        value = "";
-        } else {
-        document.getElementById("player1-name").placeholder = "Escribe tu nombre";
-        sessionStorage.setItem("player1", value);
-        }
-    }
-});
-    
-document.getElementById("player2-name").addEventListener("input", () => {
-
-    let value = document.getElementById("player2-name").value;
-
-    if (value.length === 0) {
-    sessionStorage.removeItem("player2");
-
-    } else {
+inputs.map((input) => {
+    input.addEventListener('input', () => {
+        let value = input.value;
 
         if (value.length > 20) {
-        value = value.substr(0, 20);
-        document.getElementById("player2-name").value = value;
+            value = value.slice(0, 20);
+            document.getElementById(input.id).value = value;
         }
+
         if (!/^[a-zA-Z]+$/.test(value)) {
-        document.getElementById("player2-name").placeholder = "Introduce letras";
-        document.getElementById("player2-name").value = "";
-        value = "";
-        } else {
-        document.getElementById("player2-name").placeholder = "Escribe tu nombre";
-        sessionStorage.setItem("player2", value);
+            document.getElementById(input.id).placeholder = "Introduce letras";
+            document.getElementById(input.id).value = "";
+            value = "";
         }
-    }
+
+        if (input.id === "player1-name") {
+            player1.name = value;
+            if (player1.name === "") {
+                sessionStorage.removeItem("player1");
+            } else {
+                sessionStorage.setItem("player1", JSON.stringify(player1));
+            }
+        } else if (input.id === "player2-name") {
+            player2.name = value;
+            if (player2.name === "") {
+                sessionStorage.removeItem("player2");
+            } else {
+                sessionStorage.setItem("player2", JSON.stringify(player2));
+            }
+        }
+        console.log(player1, player2);
+    });
 });
