@@ -46,7 +46,9 @@ body {
     align-items: center;
     font-family: 'VT323', monospace;
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
+    height: 100px;
+    width: 100px;
 }
 
 .game-board-box {
@@ -99,12 +101,19 @@ body {
     }
 
     .tabletop {
-        height: 400px;
-        width: 400px;
+        height: 390px;
+        width: 390px;
     }
 
     .central-game-tabletop {
         height: 75vh;
+    }
+
+    .square {
+
+        height: 130px;
+        width: 130px;
+        font-size: 100px;
     }
 
     .vampire-avatar-2-img {
