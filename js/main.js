@@ -87,10 +87,10 @@ inputs.map((input) => {
     input.addEventListener('input', () => {
         let value = input.value;
 
-        if (value.length > 20) {
-            value = value.slice(0, 20);
-            document.getElementById(input.id).value = value;
-        }
+        // if (value.length > 20) {
+        //     value = value.slice(0, 20);
+        //     document.getElementById(input.id).value = value;
+        // }
 
         if (!/^[a-zA-Z]+$/.test(value)) {
             document.getElementById(input.id).placeholder = "Introduce letras";
