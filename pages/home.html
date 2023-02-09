@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-12 landing-topper landing-topper-home">
                 <div class="landing-topper-text-box d-flex justify-content-center align-items-center">
-                    <a class="landing-upper-logo pt-1" href="../index.html"><img class="landing-upper-logo pt-1" src="../img/tictactoe-upper-logo-5.png" alt="ttt-logo-1"></a>
+                    <a class="landing-upper-logo pt-1" href="../index.html" onclick="sessionStorage.clear();"><img class="landing-upper-logo pt-1" src="../img/tictactoe-upper-logo-5.png" alt="ttt-logo-1"></a>
                 </div>
             </div>
             <div class="col-12 d-flex justify-content-center align-items-center">
@@ -37,18 +37,17 @@
                 <p class="txt-players txt-players-top fs-1">ELIGE TU FACCIÓN</p>
                 <div class="mb-3 d-flex flex-column justify-content-center align-items-center">
                     <label for="formGroupExampleInput" class="form-label txt-players"><img src="../img/vampire-avatar-2.png" class="vampire-avatar-2-img" alt="v-avatar-2"> VAMPIROS</label>
-                    <input type="text" maxlength="15" class="form-control txt-players" id="player1-name" placeholder="Introduce tu nombre">
+                    <input name="player1" type="text" maxlength="15" class="form-control txt-players namePlayer" id="player1-name" placeholder="Introduce tu nombre">
                 </div>
                 <div class="mb-3 text-center">
                     <label for="formGroupExampleInput2" class="form-label txt-players">HOMBRES LOBO <img src="../img/werewolf-avatar-2.png" class="vampire-avatar-2-img" alt="v-avatar-2"></label>
-                    <input type="text" maxlength="15" class="form-control txt-players" id="player2-name" placeholder="Introduce tu nombre">
+                    <input name="player2" type="text" maxlength="15" class="form-control txt-players namePlayer" id="player2-name" placeholder="Introduce tu nombre">
                 </div>
             </div>
                 </div>
             </div>
             <div class="col-12 landing-footer landing-footer-home d-flex flex-column align-items-center justify-content-center gap-2">
-                <!-- <a class="btn btn-danger button-landing" href="../pages/game-tabletop.html" id="start-game-button" role="button">JUGAR</a> -->
-                <a class="btn btn-danger button-landing" href="../pages/game-tabletop.html" id="start-game-button" role="button">JUGAR</a>
+                <div class="btn btn-danger button-landing" id="botonPlayers" onclick="cambiaPantalla()">JUGAR</div>
             </div>
         </div>
     </div>

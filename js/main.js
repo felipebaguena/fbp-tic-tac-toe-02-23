@@ -72,48 +72,66 @@ tablero.map(
 
 //SESSION STORAGE//
 
+let players = {
+    player1 : "",
+    player2 : ""
+}
 
-let player1 = {
-    name: ''
-};
+let inputs = Array.from(document.getElementsByClassName("namePlayer"));
 
-let player2 = {
-    name: ''
-};
+//Mapeare el array inputs para darle a todos los elementos el evento addeventlistener input
+//para controlar cuando vayamos escribiendo en ellos
 
-let inputs = Array.from(document.getElementsByTagName("input"));
+inputs.map(
+    elemento => {
+        elemento.addEventListener("input", ()=>{
 
-inputs.map((input) => {
-    input.addEventListener('input', () => {
-        let value = input.value;
+            //Según vamos escribiendo en el input, iremos actualizando el objeto players..
+            //metiendo los valores en la propiedad correspondiente (player1 si escribo en el input de player1 por ejemplo)
 
-        // if (value.length > 20) {
-        //     value = value.slice(0, 20);
-        //     document.getElementById(input.id).value = value;
-        // }
+            for(let jugador in players){
+                if(elemento.name == jugador){
+                    let value = elemento.value;
+                    
+                    if (!/^[a-zA-Z0-9\s]+$/.test(value)) {
+                        document.getElementById(elemento.id).placeholder = "Carácter no válido";
+                        document.getElementById(elemento.id).value = "";
+                        value = "";
 
-        if (!/^[a-zA-Z]+$/.test(value)) {
-            document.getElementById(input.id).placeholder = "Introduce letras";
-            document.getElementById(input.id).value = "";
-            value = "";
-        }
+                        setTimeout(function() {
+                            document.getElementById(elemento.id).placeholder = "Introduce tu nombre";
+                            }, 2000);
+                    }
 
-        if (input.id === "player1-name") {
-            player1.name = value;
-            if (player1.name === "") {
-                sessionStorage.removeItem("player1");
-            } else {
-                sessionStorage.setItem("player1", JSON.stringify(player1));
+                    //Ahora es cuando meto el valor en el objeto
+                    players[jugador] = elemento.value;
+
+
+                }
             }
-        } else if (input.id === "player2-name") {
-            player2.name = value;
-            if (player2.name === "") {
-                sessionStorage.removeItem("player2");
-            } else {
-                sessionStorage.setItem("player2", JSON.stringify(player2));
-            }
-        }
-        console.log(player1, player2);
-    });
-});
+        })
+    }
+)
 
+
+//Creo la función cambiaPantalla que guardará en sessionStorage y después cambiará de pantalla
+
+const cambiaPantalla = () => {
+
+    //Primero comprobamos que los nombres de los players NO esten vacios....
+
+    if( (players.player1 === '') || (players.player2 === '') ){
+
+        //Si uno de los 2 está vacio...ejecuto un return y así salgo de la función
+
+        return;
+    }
+
+    //Si llego a este punto es porque los nombres si que tenían algún valor..
+
+    sessionStorage.setItem("playersInfo", JSON.stringify(players));
+
+    //Después de haber guardado .... cambiamos de página
+
+        window.open("../pages/game-tabletop.html","_self");
+}
