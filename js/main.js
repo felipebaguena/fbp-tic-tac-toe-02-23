@@ -31,7 +31,12 @@ const comprueboGanador = () => {
         
         console.log(`Ha ganado: ${miTablero[pos1]}`);
         juegoFinalizado = true;
-        cambioPantallaVictoria();
+        // cambioPantallaVictoria();
+        if (miTablero[pos1] === 'X') {
+            window.open("../pages/congrats-vampires.html", "_self");
+        } else if (miTablero[pos1] === 'O') {
+            window.open("../pages/congrats-werewolves.html", "_self");
+          }
         }
     });
 };
@@ -118,8 +123,12 @@ const cambiaPantalla = () => {
         window.open("../pages/game-tabletop.html","_self");
 }
 
-const cambioPantallaVictoria = () => {
 
-        window.open("../pages/congrats-vampires.html","_self");
 
-}
+// const cambioPantallaVictoria = () => {
+//     if (miTablero[pos1] === 'X') {
+//       window.open("../pages/congrats-vampires.html", "_self");
+//     } else if (miTablero[pos1] === 'O') {
+//       window.open("../pages/congrats-werewolves.html", "_self");
+//     }
+//   };
