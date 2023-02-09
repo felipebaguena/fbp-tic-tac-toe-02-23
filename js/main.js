@@ -12,7 +12,7 @@ let miTablero = ["","","","","","","","",""];
 let juegoFinalizado = false;
 let fichaRetirada = false;
 
-let combinacionGanadora = [
+let combinacionesGanadoras = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -25,8 +25,8 @@ let combinacionGanadora = [
 
 const comprueboGanador = () => {
     console.log(miTablero);
-    combinacionGanadora.map(comparador => {
-        let [pos1, pos2, pos3] = comparador;
+    combinacionesGanadoras.map(combinacionGanadora => {
+        let [pos1, pos2, pos3] = combinacionGanadora;
         if (miTablero[pos1] === miTablero[pos2] && miTablero[pos2] === miTablero[pos3] && miTablero[pos1] !== "") {
         
         console.log(`Ha ganado: ${miTablero[pos1]}`);
