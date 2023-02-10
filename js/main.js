@@ -49,6 +49,9 @@ tablero.map(
 
         celda.addEventListener('click', ()=> {
 
+            
+            
+
             if (juegoFinalizado) return;
 
             if (celda.innerHTML === "X" && turno == true && fichaRetirada === false && fichasColocadas >= 6) {
@@ -57,6 +60,7 @@ tablero.map(
                 miTablero[celda.id] = "";
                 fichaP1++;
                 fichaRetirada = true;
+                document.getElementById('fichasJugador1').innerHTML = `FICHAS RESTANTES: ${fichaP1}`;
 
             } else if (celda.innerHTML === "O" && turno !== true && fichaRetirada === false && fichasColocadas >= 6) {
 
@@ -64,8 +68,10 @@ tablero.map(
                 miTablero[celda.id] = "";
                 fichaP2++;
                 fichaRetirada = true;
+                document.getElementById('fichasJugador2').innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
 
             } else if((celda.innerHTML === "") && (fichaP1 > 0 || fichaP2 > 0)){
+
             
                 celda.innerHTML = (turno) ? "X" : "O";
                 (turno) ? fichaP1-- : fichaP2--;
@@ -74,6 +80,9 @@ tablero.map(
                 turno = !turno;
                 fichasColocadas++;
                 fichaRetirada = false;
+
+                document.getElementById('fichasJugador1').innerHTML = `FICHAS RESTANTES: ${fichaP1}`;
+                document.getElementById('fichasJugador2').innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
             }
         });          
     }
