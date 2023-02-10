@@ -49,9 +49,6 @@ tablero.map(
 
         celda.addEventListener('click', ()=> {
 
-            
-            
-
             if (juegoFinalizado) return;
 
             if (celda.innerHTML === "X" && turno == true && fichaRetirada === false && fichasColocadas >= 6) {
@@ -72,7 +69,6 @@ tablero.map(
 
             } else if((celda.innerHTML === "") && (fichaP1 > 0 || fichaP2 > 0)){
 
-            
                 celda.innerHTML = (turno) ? "X" : "O";
                 (turno) ? fichaP1-- : fichaP2--;
                 miTablero[celda.id] = (turno) ? "X" : "O";

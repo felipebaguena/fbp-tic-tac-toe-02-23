@@ -57,6 +57,7 @@ body {
 .central-selection-player {
     width: 80%;
     border:#42032C 1px solid;
+    border-radius: 5px;
 }
 
 .vampire-avatar-2-img {
