@@ -19,14 +19,17 @@ body {
 }
 
 .vampire-avatar-2-img {
-    width: 35px;
-    height: 35px;
-    margin-right: 5px;
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+    padding: 2%;
 }
 
 .txt-players{
     font-family: 'VT323', monospace;
-    font-size: x-large;
+    font-size: large;
+    margin: 0;
+    padding: 0;
 }
 
 /* /// PÁGINA DE JUEGO /// */
@@ -36,8 +39,6 @@ body {
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 300px;
-    width: 300px;
 }
 
 .square {
@@ -47,22 +48,28 @@ body {
     font-family: 'VT323', monospace;
     text-align: center;
     font-size: 80px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
 }
 
 .game-board-box {
     height: 75vh;
 }
 
+
+
 .avatar-pixel-2 {
-        height: 10vh;
+        height: 100%;
+        width: fit-content;
         display: flex;
         align-items: center;
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
 }
 
 .central-game-tabletop {
-        height: 55vh;
+    height: 90%;
 }
 
 
@@ -77,6 +84,7 @@ body {
 
     .txt-players {
         font-size: xx-large;
+
     }
 
 } 
@@ -125,6 +133,16 @@ body {
         display: flex;
         flex-direction: column;
         height: 75vh;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .text-box-players {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
 }
