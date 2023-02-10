@@ -23,6 +23,7 @@ let combinacionesGanadoras = [
     [2, 4, 6],
 ];
 
+
 const comprueboGanador = () => {
     console.log(miTablero);
     combinacionesGanadoras.map(combinacionGanadora => {
@@ -32,11 +33,12 @@ const comprueboGanador = () => {
         
         console.log(`Ha ganado: ${miTablero[pos1]}`);
         juegoFinalizado = true;
-
             if (miTablero[pos1] === 'X') {
+                sessionStorage.setItem("ganador", "X")
             window.open("../pages/congrats-vampires.html", "_self");
             } else if (miTablero[pos1] === 'O') {
-            window.open("../pages/congrats-werewolves.html", "_self");
+                sessionStorage.setItem("ganador", "O")
+                window.open("../pages/congrats-vampires.html", "_self");
             }
         }
     });
