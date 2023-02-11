@@ -23,9 +23,19 @@ let combinacionesGanadoras = [
     [2, 4, 6],
 ];
 
+const quitarFicha = (celda) => {
+    celda.innerHTML = "";
+    miTablero[celda.id] = "";
+}
+
+const gameType = JSON.parse(sessionStorage.getItem("gameType", "playerGame"));
+const jugadaCPU = () => {
+    console.log("bla");
+    setTimeout(()=> {console.log("fin de turno")}, 1000)
+    turno = !turno
+}
 
 const comprueboGanador = () => {
-    console.log(miTablero);
     combinacionesGanadoras.map(combinacionGanadora => {
         let [pos1, pos2, pos3] = combinacionGanadora;
         
@@ -50,22 +60,23 @@ tablero.map(
         celda.addEventListener('click', ()=> {
 
             if (juegoFinalizado) return;
+            if (gameType === "cpuGame" && !turno) return;
 
             if (celda.innerHTML === "X" && turno == true && fichaRetirada === false && fichasColocadas >= 6) {
 
-                celda.innerHTML = "";
-                miTablero[celda.id] = "";
+                quitarFicha(celda);
                 fichaP1++;
                 fichaRetirada = true;
                 document.getElementById('fichasJugador1').innerHTML = `FICHAS RESTANTES: ${fichaP1}`;
+                if (gameType === "cpuGame") jugadaCPU();
 
             } else if (celda.innerHTML === "O" && turno !== true && fichaRetirada === false && fichasColocadas >= 6) {
 
-                celda.innerHTML = "";
-                miTablero[celda.id] = "";
+                quitarFicha(celda);
                 fichaP2++;
                 fichaRetirada = true;
                 document.getElementById('fichasJugador2').innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
+                if (gameType === "cpuGame") jugadaCPU();
 
             } else if((celda.innerHTML === "") && (fichaP1 > 0 || fichaP2 > 0)){
 
@@ -79,6 +90,8 @@ tablero.map(
 
                 document.getElementById('fichasJugador1').innerHTML = `FICHAS RESTANTES: ${fichaP1}`;
                 document.getElementById('fichasJugador2').innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
+
+                if (gameType === "cpuGame") jugadaCPU();
             }
         });          
     }
