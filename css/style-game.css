@@ -2,6 +2,7 @@ body {
     background-color: #F1EFDC;
 }
 
+
 .landing-topper {
     height: 25vh;
 }
@@ -55,8 +56,6 @@ body {
 .game-board-box {
     height: 75vh;
 }
-
-
 
 .avatar-pixel-2 {
         height: 100%;

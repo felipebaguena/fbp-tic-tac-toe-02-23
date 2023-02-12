@@ -28,7 +28,7 @@ const quitarFicha = (celda) => {
     miTablero[celda.id] = "";
 }
 
-const gameType = JSON.parse(sessionStorage.getItem("gameType", "playerGame"));
+// const gameType = JSON.parse(sessionStorage.getItem("gameType", "playerGame"));
 const jugadaCPU = () => {
     console.log("bla");
     setTimeout(()=> {console.log("fin de turno")}, 1000)
@@ -97,7 +97,8 @@ tablero.map(
     }
 )
 
-//SESSION STORAGE//
+
+  //SESSION STORAGE//
 
 let players = {
     player1 : "",
@@ -132,7 +133,8 @@ inputs.map(
     }
 )
 
-const cambiaPantalla = () => {
+
+    const cambiaPantalla = () => {
 
     if( (players.player1 === '') || (players.player2 === '') ){
 
@@ -144,3 +146,43 @@ const cambiaPantalla = () => {
         window.open("../pages/game-tabletop.html","_self");
 }
 
+
+//MODO CONTRA LA CPU
+
+const modePVP = () => {
+    document.getElementById("electionMode-p").classList.add("hidden");
+    document.getElementById("electionMode-cpu").classList.add("hidden");
+    document.getElementById("nombres-home-vampires").classList.remove("hidden");
+    document.getElementById("nombres-home-werewolves").classList.remove("hidden");
+    document.getElementById("botonPlayers").classList.remove("hidden")
+    
+}
+
+const modeCPU = () => {
+    document.getElementById("buttons-election-mode").classList.add("hidden");
+    document.getElementById("factionCPU").classList.remove("hidden");
+}
+
+const vampiresCPU = () => {
+    document.getElementById("factionCPU").classList.add("hidden");
+    document.getElementById("nombres-home-vampires").classList.remove("hidden");
+    document.getElementById("boton-cpu-play").classList.remove("hidden");
+}
+
+const werewolvesCPU = () => {
+    document.getElementById("factionCPU").classList.add("hidden");
+    document.getElementById("nombres-home-werewolves").classList.remove("hidden");
+    document.getElementById("boton-cpu-play").classList.remove("hidden");
+}
+
+const cambiaPantallaHistoria = () => {
+
+    if( (players.player1 === '') && (players.player2 === '') ){
+
+        return;
+    }
+
+    sessionStorage.setItem("playersInfo", JSON.stringify(players));
+    sessionStorage.setItem("gameType", "cpuGame")
+        window.open("../pages/game-tabletop.html","_self");
+}

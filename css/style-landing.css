@@ -2,6 +2,10 @@ body {
     background-color: #F1EFDC;
 }
 
+.hidden {
+    display: none;
+    }
+
 .landing-topper {
     height: 25vh;
 }
