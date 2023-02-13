@@ -28,7 +28,6 @@ const quitarFicha = (celda) => {
     miTablero[celda.id] = "";
 }
 
-
 //FUNCIONAMIENTO DE LA CPU
 
 let = cpuOcupada = false
@@ -66,8 +65,56 @@ const quitarFichaAleatoriaCPU = () => {
     fichaP2++;
 };
 
+// const jugadaCPU = () => {
+//     cpuOcupada = true
+//     if (fichaP2 !== 0) {
+//         setTimeout(colocarFichaCPU, Math.random() * (1000 - 500) + 500);
+//     } else if (fichaP2 === 0) {
+//         setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
+//         setTimeout(colocarFichaCPU, Math.random() * (1500 - 800) + 800);
+//     }
+//     cpuOcupada = false
+// };
+
 const jugadaCPU = () => {
     cpuOcupada = true
+    for (let i = 0; i < combinacionesGanadoras.length; i++) {
+        let combinacionGanadora = combinacionesGanadoras[i];
+        let celda1 = miTablero[combinacionGanadora[0]];
+        let celda2 = miTablero[combinacionGanadora[1]];
+        let celda3 = miTablero[combinacionGanadora[2]];
+
+        if (celda1 === "O" && celda2 === "O" && celda3 === "") {
+            if (fichaP2 === 0) {
+                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500)}
+                setTimeout(() => {
+                    miTablero[combinacionGanadora[2]] = "O";
+                    tablero[combinacionGanadora[2]].innerHTML = "O";
+                    comprueboGanador();
+                }, 1000);
+            return;
+        }
+        if (celda1 === "O" && celda2 === "" && celda3 === "O") {
+            if (fichaP2 === 0) {
+                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500)}
+                setTimeout(() => {
+                    miTablero[combinacionGanadora[1]] = "O";
+                    tablero[combinacionGanadora[1]].innerHTML = "O";
+                    comprueboGanador();
+                }, 1000);
+            return;
+        }
+        if (celda1 === "" && celda2 === "O" && celda3 === "O") {
+            if (fichaP2 === 0) {
+                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500)}
+                setTimeout(() => {
+                    miTablero[combinacionGanadora[0]] = "O";
+                    tablero[combinacionGanadora[0]].innerHTML = "O";
+                    comprueboGanador();
+                }, 1000);
+            return;
+        }
+    }
     if (fichaP2 !== 0) {
         setTimeout(colocarFichaCPU, Math.random() * (1000 - 500) + 500);
     } else if (fichaP2 === 0) {
@@ -83,7 +130,6 @@ const jugadaCPU = () => {
 const comprueboGanador = () => {
     combinacionesGanadoras.map(combinacionGanadora => {
         let [pos1, pos2, pos3] = combinacionGanadora;
-        
         if (miTablero[pos1] === miTablero[pos2] && miTablero[pos2] === miTablero[pos3] && miTablero[pos1] !== "") {
         
         console.log(`Ha ganado: ${miTablero[pos1]}`);
