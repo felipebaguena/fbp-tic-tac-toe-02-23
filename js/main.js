@@ -65,6 +65,8 @@ const quitarFichaAleatoriaCPU = () => {
     fichaP2++;
 };
 
+// CPU ALEATORIA
+
 // const jugadaCPU = () => {
 //     cpuOcupada = true
 //     if (fichaP2 !== 0) {
@@ -76,8 +78,10 @@ const quitarFichaAleatoriaCPU = () => {
 //     cpuOcupada = false
 // };
 
+// CPU PERSIGUE LA JUGADA
+
 const jugadaCPU = () => {
-    cpuOcupada = true
+    cpuOcupada = true;
     for (let i = 0; i < combinacionesGanadoras.length; i++) {
         let combinacionGanadora = combinacionesGanadoras[i];
         let celda1 = miTablero[combinacionGanadora[0]];
@@ -86,32 +90,35 @@ const jugadaCPU = () => {
 
         if (celda1 === "O" && celda2 === "O" && celda3 === "") {
             if (fichaP2 === 0) {
-                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500)}
-                setTimeout(() => {
-                    miTablero[combinacionGanadora[2]] = "O";
-                    tablero[combinacionGanadora[2]].innerHTML = "O";
-                    comprueboGanador();
-                }, 1000);
+                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
+            }
+            setTimeout(() => {
+                miTablero[combinacionGanadora[2]] = "O";
+                tablero[combinacionGanadora[2]].innerHTML = "O";
+                comprueboGanador();
+            }, 1000);
             return;
         }
         if (celda1 === "O" && celda2 === "" && celda3 === "O") {
             if (fichaP2 === 0) {
-                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500)}
-                setTimeout(() => {
-                    miTablero[combinacionGanadora[1]] = "O";
-                    tablero[combinacionGanadora[1]].innerHTML = "O";
-                    comprueboGanador();
-                }, 1000);
+                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
+            }
+            setTimeout(() => {
+                miTablero[combinacionGanadora[1]] = "O";
+                tablero[combinacionGanadora[1]].innerHTML = "O";
+                comprueboGanador();
+            }, 1000);
             return;
         }
         if (celda1 === "" && celda2 === "O" && celda3 === "O") {
             if (fichaP2 === 0) {
-                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500)}
-                setTimeout(() => {
-                    miTablero[combinacionGanadora[0]] = "O";
-                    tablero[combinacionGanadora[0]].innerHTML = "O";
-                    comprueboGanador();
-                }, 1000);
+                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
+            }
+            setTimeout(() => {
+                miTablero[combinacionGanadora[0]] = "O";
+                tablero[combinacionGanadora[0]].innerHTML = "O";
+                comprueboGanador();
+            }, 1000);
             return;
         }
     }
@@ -121,8 +128,9 @@ const jugadaCPU = () => {
         setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
         setTimeout(colocarFichaCPU, Math.random() * (1500 - 800) + 800);
     }
-    cpuOcupada = false
+    cpuOcupada = false;
 };
+
 
 
 //CONDICIONES DE VICTORIA
