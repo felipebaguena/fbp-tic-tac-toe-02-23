@@ -80,6 +80,15 @@ const quitarFichaAleatoriaCPU = () => {
 
 // CPU PERSIGUE LA JUGADA
 
+const fichaRobadaCPU = () => {
+    fichaP2--;
+    document.getElementById("fichasJugador2").innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
+    fichasColocadas++;
+    fichaRetirada = false;
+    cpuOcupada = false;
+    turno = !turno;
+}
+
 const jugadaCPU = () => {
     cpuOcupada = true;
     for (let i = 0; i < combinacionesGanadoras.length; i++) {
@@ -97,13 +106,7 @@ const jugadaCPU = () => {
             miTablero[combinacionGanadora[2]] = "O";
             tablero[combinacionGanadora[2]].innerHTML = "O";
             comprueboGanador();
-            fichaP2--;
-            document.getElementById("fichasJugador2").innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
-            fichasColocadas++;
-    
-            fichaRetirada = false;
-            cpuOcupada = false;
-            turno = !turno;
+            fichaRobadaCPU();
             }, 1000);
             return;
             }
@@ -115,16 +118,8 @@ const jugadaCPU = () => {
             miTablero[combinacionGanadora[1]] = "O";
             tablero[combinacionGanadora[1]].innerHTML = "O";
             comprueboGanador();
-            fichaP2--;
-            document.getElementById("fichasJugador2").innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
-            fichasColocadas++;
-    
-            fichaRetirada = false;
-            cpuOcupada = false;
-            turno = !turno;
+            fichaRobadaCPU();
             }, 1000);
-    
-    
             return;
             }
         if (celda1 === "" && celda2 === "O" && celda3 === "O") {
@@ -135,12 +130,7 @@ const jugadaCPU = () => {
             miTablero[combinacionGanadora[0]] = "O";
             tablero[combinacionGanadora[0]].innerHTML = "O";
             comprueboGanador();
-            fichaP2--;
-            document.getElementById("fichasJugador2").innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
-            fichasColocadas++;
-            fichaRetirada = false;
-            cpuOcupada = false;
-            turno = !turno;
+            fichaRobadaCPU();
             }, 1000);
             return;
         }
