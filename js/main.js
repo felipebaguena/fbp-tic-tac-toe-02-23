@@ -87,50 +87,64 @@ const jugadaCPU = () => {
         let celda1 = miTablero[combinacionGanadora[0]];
         let celda2 = miTablero[combinacionGanadora[1]];
         let celda3 = miTablero[combinacionGanadora[2]];
-
+    
         if (celda1 === "O" && celda2 === "O" && celda3 === "") {
             if (fichaP2 === 0) {
-                console.log("Victoria1")
-                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
+            console.log("Victoria1");
+            setTimeout(quitarFichaAleatoriaCPU, Math.random() * 500);
             }
             setTimeout(() => {
-                miTablero[combinacionGanadora[2]] = "O";
-                tablero[combinacionGanadora[2]].innerHTML = "O";
-                comprueboGanador();
-            }, 1000);
-            console.log("Victoria1Final")
+            miTablero[combinacionGanadora[2]] = "O";
+            tablero[combinacionGanadora[2]].innerHTML = "O";
+            comprueboGanador();
+            fichaP2--;
+            document.getElementById("fichasJugador2").innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
+            fichasColocadas++;
+    
+            fichaRetirada = false;
             cpuOcupada = false;
+            turno = !turno;
+            }, 1000);
             return;
-        }
+            }
         if (celda1 === "O" && celda2 === "" && celda3 === "O") {
             if (fichaP2 === 0) {
-                console.log("Victoria2")
-                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
+            setTimeout(quitarFichaAleatoriaCPU, Math.random() * +500);
             }
             setTimeout(() => {
-                miTablero[combinacionGanadora[1]] = "O";
-                tablero[combinacionGanadora[1]].innerHTML = "O";
-                comprueboGanador();
-            }, 1000);
-            console.log("Victoria2Final")
+            miTablero[combinacionGanadora[1]] = "O";
+            tablero[combinacionGanadora[1]].innerHTML = "O";
+            comprueboGanador();
+            fichaP2--;
+            document.getElementById("fichasJugador2").innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
+            fichasColocadas++;
+    
+            fichaRetirada = false;
             cpuOcupada = false;
+            turno = !turno;
+            }, 1000);
+    
+    
             return;
-        }
+            }
         if (celda1 === "" && celda2 === "O" && celda3 === "O") {
             if (fichaP2 === 0) {
-                console.log("Victoria3")
-                setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
+            setTimeout(quitarFichaAleatoriaCPU, Math.random() * +500);
             }
             setTimeout(() => {
-                miTablero[combinacionGanadora[0]] = "O";
-                tablero[combinacionGanadora[0]].innerHTML = "O";
-                comprueboGanador();
-            }, 1000);
-            console.log("Victoria3Final")
+            miTablero[combinacionGanadora[0]] = "O";
+            tablero[combinacionGanadora[0]].innerHTML = "O";
+            comprueboGanador();
+            fichaP2--;
+            document.getElementById("fichasJugador2").innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
+            fichasColocadas++;
+            fichaRetirada = false;
             cpuOcupada = false;
+            turno = !turno;
+            }, 1000);
             return;
         }
-    }
+        }
     
 
     if (fichaP2 !== 0) {
