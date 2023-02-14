@@ -90,6 +90,7 @@ const jugadaCPU = () => {
 
         if (celda1 === "O" && celda2 === "O" && celda3 === "") {
             if (fichaP2 === 0) {
+                console.log("Victoria1")
                 setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
             }
             setTimeout(() => {
@@ -97,10 +98,13 @@ const jugadaCPU = () => {
                 tablero[combinacionGanadora[2]].innerHTML = "O";
                 comprueboGanador();
             }, 1000);
+            console.log("Victoria1Final")
+            cpuOcupada = false;
             return;
         }
         if (celda1 === "O" && celda2 === "" && celda3 === "O") {
             if (fichaP2 === 0) {
+                console.log("Victoria2")
                 setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
             }
             setTimeout(() => {
@@ -108,10 +112,13 @@ const jugadaCPU = () => {
                 tablero[combinacionGanadora[1]].innerHTML = "O";
                 comprueboGanador();
             }, 1000);
+            console.log("Victoria2Final")
+            cpuOcupada = false;
             return;
         }
         if (celda1 === "" && celda2 === "O" && celda3 === "O") {
             if (fichaP2 === 0) {
+                console.log("Victoria3")
                 setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
             }
             setTimeout(() => {
@@ -119,12 +126,18 @@ const jugadaCPU = () => {
                 tablero[combinacionGanadora[0]].innerHTML = "O";
                 comprueboGanador();
             }, 1000);
+            console.log("Victoria3Final")
+            cpuOcupada = false;
             return;
         }
     }
+    
+
     if (fichaP2 !== 0) {
+        console.log("NOVictoria")
         setTimeout(colocarFichaCPU, Math.random() * (1000 - 500) + 500);
     } else if (fichaP2 === 0) {
+        console.log("Robo1")
         setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
         setTimeout(colocarFichaCPU, Math.random() * (1500 - 800) + 800);
     }
