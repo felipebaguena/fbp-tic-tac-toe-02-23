@@ -89,6 +89,7 @@ const fichaRobadaCPU = () => {
     turno = !turno;
 }
 
+
 const jugadaCPU = () => {
     cpuOcupada = true;
     for (let i = 0; i < combinacionesGanadoras.length; i++) {
@@ -136,19 +137,65 @@ const jugadaCPU = () => {
         }
         }
     
-
-    if (fichaP2 !== 0) {
-        console.log("NOVictoria")
-        setTimeout(colocarFichaCPU, Math.random() * (1000 - 500) + 500);
-    } else if (fichaP2 === 0) {
-        console.log("Robo1")
-        setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
-        setTimeout(colocarFichaCPU, Math.random() * (1500 - 800) + 800);
-    }
-    cpuOcupada = false;
+        evitaVictoriaCPU();
 };
 
-
+const evitaVictoriaCPU = () => {
+    cpuOcupada = true;
+    for (let i = 0; i < combinacionesGanadoras.length; i++) {
+        let combinacionGanadora = combinacionesGanadoras[i];
+        let celda1 = miTablero[combinacionGanadora[0]];
+        let celda2 = miTablero[combinacionGanadora[1]];
+        let celda3 = miTablero[combinacionGanadora[2]];
+    
+        if (celda1 === "X" && celda2 === "X" && celda3 === "") {
+            if (fichaP2 === 0) {
+            console.log("Victoria1");
+            setTimeout(quitarFichaAleatoriaCPU, Math.random() * 500);
+            }
+            setTimeout(() => {
+            miTablero[combinacionGanadora[2]] = "O";
+            tablero[combinacionGanadora[2]].innerHTML = "O";
+            comprueboGanador();
+            fichaRobadaCPU();
+            }, 1000);
+            return;
+            }
+        if (celda1 === "X" && celda2 === "" && celda3 === "X") {
+            if (fichaP2 === 0) {
+            setTimeout(quitarFichaAleatoriaCPU, Math.random() * +500);
+            }
+            setTimeout(() => {
+            miTablero[combinacionGanadora[1]] = "O";
+            tablero[combinacionGanadora[1]].innerHTML = "O";
+            comprueboGanador();
+            fichaRobadaCPU();
+            }, 1000);
+            return;
+            }
+        if (celda1 === "" && celda2 === "X" && celda3 === "X") {
+            if (fichaP2 === 0) {
+            setTimeout(quitarFichaAleatoriaCPU, Math.random() * +500);
+            }
+            setTimeout(() => {
+            miTablero[combinacionGanadora[0]] = "O";
+            tablero[combinacionGanadora[0]].innerHTML = "O";
+            comprueboGanador();
+            fichaRobadaCPU();
+            }, 1000);
+            return;
+        }
+        }
+        if (fichaP2 !== 0) {
+            console.log("NOVictoria")
+            setTimeout(colocarFichaCPU, Math.random() * (1000 - 500) + 500);
+        } else if (fichaP2 === 0) {
+            console.log("Robo1")
+            setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
+            setTimeout(colocarFichaCPU, Math.random() * (1500 - 800) + 800);
+        }
+        cpuOcupada = false;
+};
 
 //CONDICIONES DE VICTORIA
 
@@ -216,7 +263,6 @@ tablero.map(
     }
 )
 
-
   //SESSION STORAGE//
 
 let players = {
@@ -264,7 +310,6 @@ inputs.map(
         window.open("../pages/game-tabletop.html","_self");
 }
 
-
 //ELECCIÓN DE MODOS DE JUEGO
 
 const modePVP = () => {
@@ -309,4 +354,3 @@ const cambiaPantallaHistoria = () => {
     sessionStorage.setItem("gameType", "cpuGame")
         window.open("../pages/game-tabletop.html","_self");
 }
-
