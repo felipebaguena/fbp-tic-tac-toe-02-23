@@ -9,6 +9,11 @@ let datosSesion = JSON.parse(sessionStorage.getItem("playersInfo"));
 if (gameType == "cpuGame") {
     player1.innerHTML = `${datosSesion.player3}`;
     player2.innerHTML = `${"VAN HELSING"}`;
+
+    
+    document.getElementById("ww-img-tb").classList.add("hidden");
+    document.getElementById("van-helsing-img-tb").classList.remove("hidden");
+
 } else {
     player1.innerHTML = `${datosSesion.player1}`;
     player2.innerHTML = `${datosSesion.player2}`;
