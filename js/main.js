@@ -330,7 +330,7 @@ const continueCPU = () => {
     document.getElementById("boton-continuar").classList.remove("hidden");
     document.getElementById("text-story-mode").classList.remove("hidden");
 
-    const texto = "La lucha contra los hombres lobo se recrudece, pero esta no es la amenaza más peligrosa a la que te enfrentas. Las leyendas habland de un depredador más hábil que tú. Profesor, doctor y filósofo, pero ante todo, un formidable cazador. Algunos lo llaman Abraham, pero el nombre que te hace temblar es ... Van Helsing.";
+    const texto = "La lucha contra los hombres lobo se recrudece, pero esta no es la amenaza más peligrosa a la que te enfrentas. Las leyendas hablan de un depredador más hábil que tú. Profesor, doctor y filósofo, pero ante todo, un formidable cazador. Algunos lo llaman Abraham, pero el nombre que te hace temblar es ... Van Helsing.";
     let i = 0;
 
     mostrarLetra = () => {

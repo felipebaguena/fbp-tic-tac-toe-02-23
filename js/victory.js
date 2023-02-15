@@ -11,12 +11,12 @@ const gameType = sessionStorage.getItem("gameType");
 if (ganador == "X" && gameType == "cpuGame") {
     let player1 = document.getElementById("player1");
     player1.innerHTML = `¡ENHORABUENA ${datosSesion.player3}!`;
-    textVictoria.innerHTML = "Esa última jugada ha sido como una bala de plata para tu rival. Has vencido esta vez, pero recuerda que la guerra continúa."
+    textVictoria.innerHTML = "Con esa última jugada le has demostrado al cazavampiros que el último familiar vivo de los Dracul no es una presa fácil. Has vencido esta vez, pero tu rival todavía no ha dicho su última palabra."
     factionVictory.innerHTML = "EL ANCIANO SIGUE CON VIDA"
     victoryImage.innerHTML = `<img src="../img/vampiro-pixelart.png" class="avatar-pixel-art" alt="vampire-pixel">`
 } else if (ganador == "O" && gameType == "cpuGame"){
-    player1.innerHTML = `¡HAS MUERTO!`;
-    textVictoria.innerHTML = "Esa última estaca ha alcanzado tu oscuro corazón. Tu cuerpo se desvanece, pero recuerda que la guerra continúa."
+    player1.innerHTML = `¡HA LLEGADO TU HORA!`;
+    textVictoria.innerHTML = "Esa última estaca ha rozado tu oscuro corazón. Te ves obligado a buscar un agujero en el que esconderte, pero el último familiar vivo de los Dracul todavía no ha dicho su última palabra."
     factionVictory.innerHTML = "VAN HELSING HA VENCIDO"
     victoryImage.innerHTML = `<img src="../img/helsing2.png" class="avatar-pixel-art" alt="vampire-pixel">`
 } else if (ganador == "X" && gameType != "cpuGame"){
