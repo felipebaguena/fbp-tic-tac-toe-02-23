@@ -1,9 +1,16 @@
 let player1 = document.getElementById("player1");
 let player2 = document.getElementById("player2");
+let player3 = document.getElementById("player3");
+let player4 = document.getElementById("player4");
+const gameType = sessionStorage.getItem("gameType", "playerGame");
 
 let datosSesion = JSON.parse(sessionStorage.getItem("playersInfo"));
 
-player1.innerHTML = `${datosSesion.player1}`;
-player2.innerHTML = `${datosSesion.player2}`;
+if (gameType == "cpuGame") {
+    player1.innerHTML = `${datosSesion.player3}`;
+    player2.innerHTML = `${"VAN HELSING"}`;
+} else {
+    player1.innerHTML = `${datosSesion.player1}`;
+    player2.innerHTML = `${datosSesion.player2}`;
+}
 
-const gameType = sessionStorage.getItem("gameType", "playerGame");

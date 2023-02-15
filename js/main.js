@@ -267,7 +267,9 @@ tablero.map(
 
 let players = {
     player1 : "",
-    player2 : ""
+    player2 : "",
+    player3 : "",
+    player4 : ""
 }
 
 let inputs = Array.from(document.getElementsByClassName("namePlayer"));
@@ -301,13 +303,11 @@ inputs.map(
     const cambiaPantalla = () => {
 
     if( (players.player1 === '') || (players.player2 === '') ){
-
         return;
     }
 
     sessionStorage.setItem("playersInfo", JSON.stringify(players));
-
-        window.open("../pages/game-tabletop.html","_self");
+    window.open("../pages/game-tabletop.html","_self");
 }
 
 //ELECCIÓN DE MODOS DE JUEGO
@@ -326,31 +326,30 @@ const modePVP = () => {
 
 const modeCPU = () => {
     document.getElementById("buttons-election-mode").classList.add("hidden");
-    // document.getElementById("factionCPU").classList.remove("hidden");
 
-    document.getElementById("factionCPU").classList.add("hidden");
-    document.getElementById("nombres-home-vampires").classList.remove("hidden");
+    document.getElementById("nombres-home-anciano").classList.remove("hidden");
     document.getElementById("boton-cpu-play").classList.remove("hidden");
     
-
     let textElection = document.getElementById("game-type-election-txt");
     textElection.innerHTML = "EL ÚLTIMO VAMPIRO";
+    
 }
 
 const vampiresCPU = () => {
-    document.getElementById("factionCPU").classList.add("hidden");
+
     document.getElementById("nombres-home-vampires").classList.remove("hidden");
     document.getElementById("boton-cpu-play").classList.remove("hidden");
 }
 
 const cambiaPantallaHistoria = () => {
 
-    if( (players.player1 === '') && (players.player2 === '') ){
-
+    if(players.player3 === ''){
         return;
+
     }
 
     sessionStorage.setItem("playersInfo", JSON.stringify(players));
     sessionStorage.setItem("gameType", "cpuGame")
-        window.open("../pages/game-tabletop.html","_self");
+    window.open("../pages/game-tabletop.html","_self"); 
+
 }
