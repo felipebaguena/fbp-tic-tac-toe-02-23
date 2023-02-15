@@ -22,6 +22,11 @@ body {
     color: #42032C;
 }
 
+#text-story-mode {
+    margin: 10px;
+    font-size: medium;
+}
+
 .landing-main {
     height: 50vh;
 }
@@ -125,6 +130,11 @@ border-bottom: #42032C 1px solid;
         font-size: x-large;
     }
 
+    #text-story-mode {
+        margin: 10px;
+        font-size: large;
+    }
+
     .how-to-text {
         font-size: x-large;
     }
@@ -147,6 +157,15 @@ border-bottom: #42032C 1px solid;
 
     .central-selection-player-lg {
         width: 40%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    #text-story-mode {
+        margin: 10px;
+        font-size: x-large;
     }
 
 }

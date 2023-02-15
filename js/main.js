@@ -324,9 +324,36 @@ const modePVP = () => {
     
 }
 
-const modeCPU = () => {
-    document.getElementById("buttons-election-mode").classList.add("hidden");
+const continueCPU = () => {
 
+    document.getElementById("buttons-election-mode").classList.add("hidden");
+    document.getElementById("boton-continuar").classList.remove("hidden");
+    document.getElementById("text-story-mode").classList.remove("hidden");
+
+    const texto = "La lucha contra los hombres lobo se recrudece, pero esta no es la amenaza más peligrosa a la que te enfrentas. Las leyendas habland de un depredador más hábil que tú. Profesor, doctor y filósofo, pero ante todo, un formidable cazador. Algunos lo llaman Abraham, pero el nombre que te hace temblar es ... Van Helsing.";
+    let i = 0;
+
+    mostrarLetra = () => {
+    if (i < texto.length) {
+    document.getElementById("text-story-mode").innerHTML += texto.charAt(i);
+    i++;
+    setTimeout(mostrarLetra, 50); // Velocidad de aparición de letras en milisegundos
+    }
+    }
+
+mostrarLetra();
+    
+
+
+    let textElection = document.getElementById("game-type-election-txt");
+    textElection.innerHTML = "EL ÚLTIMO VAMPIRO";
+    
+}
+
+const modeCPU = () => {
+    document.getElementById("text-story-mode").classList.add("hidden");
+    document.getElementById("buttons-election-mode").classList.add("hidden");
+    document.getElementById("boton-continuar").classList.add("hidden");
     document.getElementById("nombres-home-anciano").classList.remove("hidden");
     document.getElementById("boton-cpu-play").classList.remove("hidden");
     
