@@ -18,7 +18,7 @@ if (ganador == "X" && gameType == "cpuGame") {
     player1.innerHTML = `¡HAS MUERTO!`;
     textVictoria.innerHTML = "Esa última estaca ha alcanzado tu oscuro corazón. Tu cuerpo se desvanece, pero recuerda que la guerra continúa."
     factionVictory.innerHTML = "VAN HELSING HA VENCIDO"
-    victoryImage.innerHTML = `<img src="../img/hombrelobo-pixelart.png" class="avatar-pixel-art" alt="vampire-pixel">`
+    victoryImage.innerHTML = `<img src="../img/helsing2.png" class="avatar-pixel-art" alt="vampire-pixel">`
 } else if (ganador == "X" && gameType != "cpuGame"){
     let player1 = document.getElementById("player1");
     player1.innerHTML = `¡ENHORABUENA ${datosSesion.player1}!`;
