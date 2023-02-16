@@ -48,6 +48,29 @@ body {
     border: #8d0f61 2px outset;
 }
 
+.button-landing-2 {
+    background-color: #207d08;
+    border: #466904 2px outset;
+}
+
+.button-landing-2:hover {
+    background-color: #24a906 !important;
+    border: #466904 2px outset !important;
+}
+
+.button-landing-3 {
+    background-color: #4f414a;
+    border: #690404 2px outset;
+}
+
+.button-landing-3:hover {
+    background-color: #796873 !important;
+}
+
+.button-landing-3:active {
+    background-color: #60515b !important;
+}
+
 .button-landing:hover {
 
     background-color: #731251;
@@ -73,13 +96,23 @@ body {
     width: 35px;
 }
 
+#el-anciano-img {
+    width: 70px;
+}
+
 .txt-players{
     font-family: 'VT323', monospace;
     font-size: x-large;
 }
 
+.text-top-home {
+height: 80%;
+} 
+
+
 .txt-players-top {
 border-bottom: #42032C 1px solid;
+text-shadow: 3px 3px 10px #F1EFDC;
 }
 
 .landing-topper-home {
@@ -88,6 +121,8 @@ border-bottom: #42032C 1px solid;
 
 .landing-main-home {
     height: 60vh;
+    background-image: url(../img/background-wall-8.png);
+    background-repeat: repeat;
 }
 
 .landing-footer-home {

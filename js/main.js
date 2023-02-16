@@ -31,6 +31,7 @@ const quitarFicha = (celda) => {
 //FUNCIONAMIENTO DE LA CPU
 
 let = cpuOcupada = false
+let cuentaTurno = 0;
 
 const colocarFichaCPU = () => {
 
@@ -89,8 +90,14 @@ const fichaRobadaCPU = () => {
     turno = !turno;
 }
 
-
 const jugadaCPU = () => {
+    cuentaTurno++;
+    console.log(cuentaTurno);
+    if (cuentaTurno == 2){
+        alertPlay();
+    } else if (cuentaTurno == 4){
+        alertPlayPlayer();
+    }
     cpuOcupada = true;
     for (let i = 0; i < combinacionesGanadoras.length; i++) {
         let combinacionGanadora = combinacionesGanadoras[i];
@@ -337,7 +344,7 @@ const continueCPU = () => {
     if (i < texto.length) {
     document.getElementById("text-story-mode").innerHTML += texto.charAt(i);
     i++;
-    setTimeout(mostrarLetra, 50); // Velocidad de aparición de letras en milisegundos
+    setTimeout(mostrarLetra, 50);
     }
     }
 
@@ -380,3 +387,19 @@ const cambiaPantallaHistoria = () => {
     window.open("../pages/game-tabletop.html","_self"); 
 
 }
+
+// ALERTS //
+
+const alertPlay = () => {
+    document.getElementById("text-alert-play-id").classList.remove("hidden");
+    setTimeout(() => {
+        document.getElementById("text-alert-play-id").classList.add("hidden");
+    }, 1500);
+};
+
+const alertPlayPlayer = () => {
+    document.getElementById("text-alert-play-id-2").classList.remove("hidden");
+    setTimeout(() => {
+        document.getElementById("text-alert-play-id-2").classList.add("hidden");
+    }, 1500);
+};

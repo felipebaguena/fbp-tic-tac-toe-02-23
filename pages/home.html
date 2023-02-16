@@ -34,14 +34,16 @@
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="col-12 central-selection-player central-selection-player-lg">
             <div class="col-12 landing-main landing-main-home d-flex justify-content-center align-items-center flex-column">
+
                 <p class="txt-players txt-players-top fs-1" id="game-type-election-txt">ELIGE EL MODO DE JUEGO</p>
                 
+                <div class="text-top-home d-flex align-items-start">
                 <!-- ELECCIÓN DE MODO DE JUEGO -->
 
                 <div id="contenedor-elecciones-home">
                     <div id="buttons-election-mode" class="text-center">
-                        <div class="btn btn-danger button-landing m-1" id="electionMode-p" onclick="modePVP()">VAMPIROS VS HOMBRES LOBO (PVP)</div>
-                        <div class="btn btn-danger button-landing m-1" id="electionMode-cpu" onclick="continueCPU()">MODO HISTORIA (VS CPU)</div>
+                        <div class="btn btn-danger button-landing button-landing-2 m-1" id="electionMode-p" onclick="modePVP()">VAMPIROS VS HOMBRES LOBO (PVP)</div>
+                        <div class="btn btn-danger button-landing m-1" id="electionMode-cpu" onclick="continueCPU()">MODO HISTORIA (PLAYER VS CPU)</div>
                     </div>
                 </div>
 
@@ -61,13 +63,14 @@
                         <input name="player2" type="text" maxlength="15" class="form-control txt-players namePlayer" id="player2-name" placeholder="Introduce tu nombre">
                     </div>
                     <div id=nombres-home-anciano class="mb-3 text-center hidden">
-                        <label id="victory-image" for="formGroupExampleInput2" class="form-label txt-players"><img src="../img/vampire-avatar-2.png" class="vampire-avatar-2-img" alt="v-avatar-2"> EL ANCIANO</label>
-                        <input name="player3" type="text" maxlength="15" class="form-control txt-players namePlayer" id="player3-name" placeholder="Introduce tu nombre">
+                        <label id="victory-image" for="formGroupExampleInput2" class="form-label txt-players"><img src="../img/vampire-avatar-2.png" id="el-anciano-img" class="vampire-avatar-2-img" alt="v-avatar-2"> EL ANCIANO</label>
+                        <input name="player3" type="text" maxlength="15" class="form-control txt-players namePlayer fs-4" id="player3-name" placeholder="Introduce tu nombre">
                     </div>
                     <div id=nombres-home-hellsing class="mb-3 text-center hidden">
                         <label id="victory-image" for="formGroupExampleInput2" class="form-label txt-players">VAN HELSING <img src="../img/helsing2.png" class="vampire-avatar-2-img" alt="v-avatar-2"></label>
                         <input name="player4" type="text" maxlength="15" class="form-control txt-players namePlayer" id="player4-name" placeholder="Introduce tu nombre">
                     </div>
+                </div>
                 </div>
 
             </div>
