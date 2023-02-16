@@ -40,7 +40,7 @@ body {
 }
 
 .button-landing {
-    width: 85%;
+    width: 13rem;
     font-family: 'VT323', monospace;
     font-size: x-large;
     background-color: #42032C;
@@ -49,7 +49,7 @@ body {
 }
 
 .button-landing-2 {
-    background-color: #207d08;
+    background-color: #3a682d;
     border: #466904 2px outset;
 }
 
@@ -97,7 +97,7 @@ body {
 }
 
 #el-anciano-img {
-    width: 70px;
+    width: 80px;
 }
 
 .txt-players{
@@ -129,6 +129,10 @@ text-shadow: 3px 3px 10px #F1EFDC;
     height: 15vh;
 }
 
+.button-landing-b {
+    width: 18rem;
+}
+
 /* /// PÁGINA DE REGLAS /// */
 
 .font-txt-pages {
@@ -155,7 +159,11 @@ text-shadow: 3px 3px 10px #F1EFDC;
 @media (min-width: 600px) {
 
     .button-landing {
-        width: 55%;
+        width: 80%;
+    }
+
+    .button-landing-b {
+        width: 50%;
     }
 
     .logo-ini {
@@ -183,7 +191,11 @@ text-shadow: 3px 3px 10px #F1EFDC;
 @media (min-width: 900px) {
 
     .button-landing {
-        width: 35%;
+        width: 80%;
+    }
+
+    .button-landing-b {
+        width: 40%;
     }
 
     .txt-players {
@@ -197,6 +209,10 @@ text-shadow: 3px 3px 10px #F1EFDC;
 }
 
 @media (min-width: 1200px) {
+
+    .button-landing {
+        width: 25rem;
+    }
 
     #text-story-mode {
         margin: 10px;

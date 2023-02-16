@@ -41,8 +41,8 @@
                 <!-- ELECCIÓN DE MODO DE JUEGO -->
 
                 <div id="contenedor-elecciones-home">
-                    <div id="buttons-election-mode" class="text-center">
-                        <div class="btn btn-danger button-landing button-landing-2 m-1" id="electionMode-p" onclick="modePVP()">VAMPIROS VS HOMBRES LOBO (PVP)</div>
+                    <div id="buttons-election-mode" class="text-center mt-1">
+                        <div class="btn btn-danger button-landing button-landing-2 m-3" id="electionMode-p" onclick="modePVP()">VAMPIROS VS HOMBRES LOBO (PVP)</div>
                         <div class="btn btn-danger button-landing m-1" id="electionMode-cpu" onclick="continueCPU()">MODO HISTORIA (PLAYER VS CPU)</div>
                     </div>
                 </div>
@@ -62,9 +62,9 @@
                         <label id="victory-image" for="formGroupExampleInput2" class="form-label txt-players">HOMBRES LOBO <img src="../img/werewolf-avatar-2.png" class="vampire-avatar-2-img" alt="v-avatar-2"></label>
                         <input name="player2" type="text" maxlength="15" class="form-control txt-players namePlayer" id="player2-name" placeholder="Introduce tu nombre">
                     </div>
-                    <div id=nombres-home-anciano class="mb-3 text-center hidden">
-                        <label id="victory-image" for="formGroupExampleInput2" class="form-label txt-players"><img src="../img/vampire-avatar-2.png" id="el-anciano-img" class="vampire-avatar-2-img" alt="v-avatar-2"> EL ANCIANO</label>
-                        <input name="player3" type="text" maxlength="15" class="form-control txt-players namePlayer fs-4" id="player3-name" placeholder="Introduce tu nombre">
+                    <div id=nombres-home-anciano class="mb-3 mt-4 text-center hidden">
+                        <label id="victory-image" for="formGroupExampleInput2" class="form-label txt-players"><img src="../img/vampire-avatar-2.png" id="el-anciano-img" class="vampire-avatar-2-img fs-3" alt="v-avatar-2"> EL ANCIANO</label>
+                        <input name="player3" type="text" maxlength="15" class="form-control txt-players namePlayer fs-4 mt-3" id="player3-name" placeholder="Introduce tu nombre">
                     </div>
                     <div id=nombres-home-hellsing class="mb-3 text-center hidden">
                         <label id="victory-image" for="formGroupExampleInput2" class="form-label txt-players">VAN HELSING <img src="../img/helsing2.png" class="vampire-avatar-2-img" alt="v-avatar-2"></label>
@@ -77,9 +77,9 @@
                 </div>
             </div>
             <div class="col-12 landing-footer landing-footer-home d-flex flex-column align-items-center justify-content-center gap-2">
-                <div class="btn btn-danger button-landing hidden" id="botonPlayers" onclick="cambiaPantalla()">JUGAR</div>
-                <div class="btn btn-danger button-landing hidden" id="boton-cpu-play" onclick="cambiaPantallaHistoria()">HISTORIA</div>
-                <div class="btn btn-danger button-landing hidden" id="boton-continuar" onclick="modeCPU()">CONTINUAR</div>
+                <div class="btn btn-danger button-landing button-landing-b hidden" id="botonPlayers" onclick="cambiaPantalla()">JUGAR</div>
+                <div class="btn btn-danger button-landing button-landing-b hidden" id="boton-cpu-play" onclick="cambiaPantallaHistoria()">HISTORIA</div>
+                <div class="btn btn-danger button-landing button-landing-b hidden" id="boton-continuar" onclick="modeCPU()">CONTINUAR</div>
             </div>
         </div>
     </div>
