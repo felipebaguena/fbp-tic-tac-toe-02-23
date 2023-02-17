@@ -83,7 +83,6 @@ body {
     background-color: #9a136b !important;
 }
 
-
 /* /// PÁGINA DE SELECCIÓN DE PERSONAJES /// */
 
 .central-selection-player {
@@ -184,6 +183,34 @@ text-shadow: 3px 3px 10px #F1EFDC;
 
     .central-selection-player-lg {
         width: 50%;
+    }
+
+    .button-1-style {
+        background-color: #F1EFDC;
+        color: rgb(43, 43, 43);
+        height: 8rem;
+        background-image: url(../img/background-button-2.png);
+        background-position: bottom;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    .button-1-style:hover {
+        background-image: url(../img/background-button-1.png);
+    }
+
+    .button-2-style {
+        background-color: #F1EFDC;
+        color: rgb(43, 43, 43);
+        height: 8rem;
+        background-image: url(../img/background-button-6.png);
+        background-position: bottom;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+
+    .button-2-style:hover {
+        background-image: url(../img/background-button-5.png);
     }
 
 }
