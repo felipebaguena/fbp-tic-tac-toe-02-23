@@ -397,5 +397,15 @@ const alertPlay = () => {
         setTimeout(() => {
             document.getElementById("text-alert-play-id-2").classList.add("hidden");
         }, 1500);
+    } else if (cuentaTurno === 7){
+        document.getElementById("text-alert-play-id-3").classList.remove("hidden");
+        setTimeout(() => {
+            document.getElementById("text-alert-play-id-3").classList.add("hidden");
+        }, 1500);
+    } else if (cuentaTurno === 9){
+        document.getElementById("text-alert-play-id-4").classList.remove("hidden");
+        setTimeout(() => {
+            document.getElementById("text-alert-play-id-4").classList.add("hidden");
+        }, 1500);
     }
 };
