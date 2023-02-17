@@ -59,16 +59,16 @@ body {
 }
 
 .button-landing-3 {
-    background-color: #4f414a;
+    background-color: #611e4a;
     border: #690404 2px outset;
 }
 
 .button-landing-3:hover {
-    background-color: #796873 !important;
+    background-color: #a01d72 !important;
 }
 
 .button-landing-3:active {
-    background-color: #60515b !important;
+    background-color: #430d30 !important;
 }
 
 .button-landing:hover {
