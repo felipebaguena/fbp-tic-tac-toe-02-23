@@ -93,11 +93,7 @@ const fichaRobadaCPU = () => {
 const jugadaCPU = () => {
     cuentaTurno++;
     console.log(cuentaTurno);
-    if (cuentaTurno == 2){
-        alertPlay();
-    } else if (cuentaTurno == 4){
-        alertPlayPlayer();
-    }
+    alertPlay();
     cpuOcupada = true;
     for (let i = 0; i < combinacionesGanadoras.length; i++) {
         let combinacionGanadora = combinacionesGanadoras[i];
@@ -391,15 +387,15 @@ const cambiaPantallaHistoria = () => {
 // ALERTS //
 
 const alertPlay = () => {
-    document.getElementById("text-alert-play-id").classList.remove("hidden");
-    setTimeout(() => {
-        document.getElementById("text-alert-play-id").classList.add("hidden");
-    }, 1500);
-};
-
-const alertPlayPlayer = () => {
-    document.getElementById("text-alert-play-id-2").classList.remove("hidden");
-    setTimeout(() => {
-        document.getElementById("text-alert-play-id-2").classList.add("hidden");
-    }, 1500);
+    if (cuentaTurno === 2){
+        document.getElementById("text-alert-play-id").classList.remove("hidden");
+        setTimeout(() => {
+            document.getElementById("text-alert-play-id").classList.add("hidden");
+        }, 1500);
+    } else if (cuentaTurno === 4){
+        document.getElementById("text-alert-play-id-2").classList.remove("hidden");
+        setTimeout(() => {
+            document.getElementById("text-alert-play-id-2").classList.add("hidden");
+        }, 1500);
+    }
 };
