@@ -1,5 +1,6 @@
 body {
     background-color: #F1EFDC;
+    height: 100vh;
 }
 
 .hidden {
@@ -18,6 +19,10 @@ body {
     height: 90%;
 }
 
+.landing-main-index {
+    height: 50vh;
+}
+
 .color-txt {
     color: #42032C;
 }
@@ -27,12 +32,8 @@ body {
     font-size: large;
 }
 
-.landing-main {
-    height: fit-content;
-}
-
 .logo-ini {
-    width: 260px;
+    width: 18rem;
 }
 
 .landing-footer {
@@ -124,6 +125,10 @@ text-shadow: 3px 3px 10px #F1EFDC;
     margin-top: 6%;
 }
 
+.selection-mode-box-1 {
+    margin-top: 1%;
+}
+
 .landing-main-home {
     min-height: fit-content;
     background-image: url(../img/background-wall-8.png);
@@ -173,7 +178,7 @@ text-shadow: 3px 3px 10px #F1EFDC;
     }
 
     .logo-ini {
-        width: 300px;
+        width: 20rem;
     }
     .txt-players {
         font-size: x-large;
@@ -182,6 +187,10 @@ text-shadow: 3px 3px 10px #F1EFDC;
     #text-story-mode {
         margin: 10px;
         font-size: large;
+    }
+
+    .selection-mode-box-1 {
+        margin-top: 3%;
     }
 
     .how-to-text {
@@ -240,6 +249,11 @@ text-shadow: 3px 3px 10px #F1EFDC;
         width: 40%;
     }
 
+    .landing-main-home {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -251,6 +265,14 @@ text-shadow: 3px 3px 10px #F1EFDC;
     #text-story-mode {
         margin: 10px;
         font-size: x-large;
+    }
+
+}
+
+@media (max-height: 630px) {
+
+    .landing-main-index {
+        height: fit-content;
     }
 
 }
