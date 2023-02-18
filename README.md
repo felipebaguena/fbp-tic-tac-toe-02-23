@@ -28,11 +28,13 @@ Primera versión: febrero 2023
 
 ![image](https://user-images.githubusercontent.com/122631261/218339885-cd88c65f-2702-4c9c-98eb-c6007d7009e0.png)
 
-- Actualmente, tanto la web y como la lógica del juego está en su **versión de pruebas**. Con una CPU que coloca y retira fichas de forma aleatoria. En las próximas versiones, el objetivo marcado es que la CPU emplee lógica que persiga jugadas vencedoras y evitar las jugadas ganadoras del rival. Para que la CPU no sea implacable, buscaremos ajustar el nivel de dificultad intercalando jugadas aleatorias con jugadas que persigan la victoria.
+- Para esta versión 1.0, se han añadido nuevos diseños para los botones y la introducción de un **nuevo personaje: Van Helsing**. El cazavampiros es el villano al que batir en el nuevo **Modo Historia**, en el que tomaremos el control del último descendiente de los Dracul en una partida **contra la CPU**. El desarrollo de la CPU ha pasado por varias fases, desde una en la que apenas mostraba inteligencia, moviendo de forma totalmente aleatoria, a la actual, en la que busca lograr las jugadas ganadoras y evitar la victoria del jugador. El funcionamiento de la CPU parte de movimientos aleatorios en la colocación de las fichas y en la retirada de las mismas. Cuando dos de las fichas entran en posición de victoria, coloca la tercera ficha completando la fila. Este sistema permite a la CPU evitar la victoria simple del jugador y lograr la suya.
 
-. También hay planeadas toda una serie de mejoras estéticas que darán vida al modo historia. Con pop ups de texto y animaciones, una presentación narrativa, y más.
+![image](https://user-images.githubusercontent.com/122631261/219850727-17770373-56f5-4b8c-899b-3cac03d13341.png)
+
 ### Errores conocidos
-- Actualmente, la web se enfrenta a algunos errores de estilo en la pantalla de selección de juego que, aparentemente, tienen que ver con el uso de Bootstrap y la interferencia con las clases ocultas.
+- Aunque la CPU ya persigue jugadas ganadoras y consigue evitar victorias simples del jugador, todavía no está preparada para evitar jugadas trampa o retirar ficha seleccionando la más conveniente.
+
 ### Licencia y Copyright
 
 - Todo el contenido del repositorio se encuentra bajo licencia MIT. Las imágenes, son propiedad de Felipe Báguena Peña.
