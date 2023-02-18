@@ -106,7 +106,33 @@ body {
 
 /* /// MEDIAS /// */
 
+
 @media (min-width: 372px) {
+
+    .vampire-avatar-2-img {
+        width: 75px;
+        height: auto
+    }
+
+    .txt-players {
+        font-size: xx-large;
+
+    }
+    .tabletop {
+        height: 22.5rem;
+        width: 22.5rem;
+    }
+
+    .square {
+
+        height: 7.5rem;
+        width: 7.5rem;
+        font-size: 100px;
+    }
+
+} 
+
+@media (min-width: 472px) {
 
     .vampire-avatar-2-img {
         width: 75px;
