@@ -117,6 +117,17 @@ body {
         font-size: xx-large;
 
     }
+    .tabletop {
+        height: 24rem;
+        width: 24rem;
+    }
+
+    .square {
+
+        height: 8rem;
+        width: 8rem;
+        font-size: 100px;
+    }
 
 } 
 
@@ -144,8 +155,8 @@ body {
     }
 
     .tabletop {
-        height: 22.5rem;
-        width: 22.5rem;
+        height: 24rem;
+        width: 24rem;
     }
 
     .central-game-tabletop {
@@ -154,8 +165,8 @@ body {
 
     .square {
 
-        height: 7.5rem;
-        width: 7.5rem;
+        height: 8rem;
+        width: 8rem;
         font-size: 100px;
     }
 
