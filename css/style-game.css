@@ -7,11 +7,11 @@ body {
     }
 
 .landing-topper {
-    height: 25vh;
+    height: fit-content;
 }
 
 .landing-topper-text-box {
-    height: 150px;
+    height: 10rem;
 }
 
 .landing-upper-logo {
