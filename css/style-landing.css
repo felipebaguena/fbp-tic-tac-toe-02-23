@@ -7,11 +7,11 @@ body {
     }
 
 .landing-topper {
-    height: 25vh;
+    height: fit-content;
 }
 
 .landing-topper-text-box {
-    height: 150px;
+    height: 9rem;
 }
 
 .landing-upper-logo {
@@ -28,7 +28,7 @@ body {
 }
 
 .landing-main {
-    height: 50vh;
+    height: fit-content;
 }
 
 .logo-ini {
@@ -36,7 +36,8 @@ body {
 }
 
 .landing-footer {
-    height: 25vh;
+    height: fit-content;
+    margin-top: 1rem;
 }
 
 .button-landing {
@@ -85,8 +86,9 @@ body {
 
 /* /// PÁGINA DE SELECCIÓN DE PERSONAJES /// */
 
+
 .central-selection-player {
-    width: 80%;
+    width: 90%;
     border:#42032C 1px solid;
     border-radius: 5px;
 }
@@ -115,17 +117,22 @@ text-shadow: 3px 3px 10px #F1EFDC;
 }
 
 .landing-topper-home {
-    height: 25vh;
+    height: fit-content;
+}
+
+.selection-mode-box {
+    margin-top: 6%;
 }
 
 .landing-main-home {
-    height: 60vh;
+    min-height: fit-content;
     background-image: url(../img/background-wall-8.png);
     background-repeat: repeat;
 }
 
 .landing-footer-home {
-    height: 15vh;
+    margin-top: 1rem;
+    height: fit-content;
 }
 
 .button-landing-b {
