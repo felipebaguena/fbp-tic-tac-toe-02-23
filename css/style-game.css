@@ -106,7 +106,7 @@ body {
 
 /* /// MEDIAS /// */
 
-@media (min-width: 492px) {
+@media (min-width: 372px) {
 
     .vampire-avatar-2-img {
         width: 75px;
