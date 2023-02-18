@@ -392,6 +392,11 @@ const alertPlay = () => {
         setTimeout(() => {
             document.getElementById("text-alert-play-id").classList.add("hidden");
         }, 1800);
+    } else if (cuentaTurno === 3){
+        document.getElementById("text-alert-play-id-5").classList.remove("hidden");
+        setTimeout(() => {
+            document.getElementById("text-alert-play-id-5").classList.add("hidden");
+        }, 1800);
     } else if (cuentaTurno === 4){
         document.getElementById("text-alert-play-id-2").classList.remove("hidden");
         setTimeout(() => {
@@ -407,5 +412,6 @@ const alertPlay = () => {
         setTimeout(() => {
             document.getElementById("text-alert-play-id-4").classList.add("hidden");
         }, 1800);
+        
     }
 };
