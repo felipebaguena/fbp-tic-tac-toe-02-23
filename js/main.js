@@ -66,20 +66,7 @@ const quitarFichaAleatoriaCPU = () => {
     fichaP2++;
 };
 
-// CPU ALEATORIA
-
-// const jugadaCPU = () => {
-//     cpuOcupada = true
-//     if (fichaP2 !== 0) {
-//         setTimeout(colocarFichaCPU, Math.random() * (1000 - 500) + 500);
-//     } else if (fichaP2 === 0) {
-//         setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
-//         setTimeout(colocarFichaCPU, Math.random() * (1500 - 800) + 800);
-//     }
-//     cpuOcupada = false
-// };
-
-// CPU PERSIGUE LA JUGADA
+// CPU PERSIGUE LA JUGADA GANADORA
 
 const fichaRobadaCPU = () => {
     fichaP2--;
@@ -236,7 +223,6 @@ tablero.map(
                 fichaP1++;
                 fichaRetirada = true;
                 document.getElementById('fichasJugador1').innerHTML = `FICHAS RESTANTES: ${fichaP1}`;
-                // if (gameType === "cpuGame") jugadaCPU();
 
             } else if (celda.innerHTML === "O" && turno !== true && fichaRetirada === false && fichasColocadas >= 6) {
 
@@ -244,7 +230,6 @@ tablero.map(
                 fichaP2++;
                 fichaRetirada = true;
                 document.getElementById('fichasJugador2').innerHTML = `FICHAS RESTANTES: ${fichaP2}`;
-                // if (gameType === "cpuGame") jugadaCPU();
 
             } else if((celda.innerHTML === "") && (fichaP1 > 0 || fichaP2 > 0)){
                 if (!cpuOcupada){
