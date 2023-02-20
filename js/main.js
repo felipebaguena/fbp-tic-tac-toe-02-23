@@ -52,9 +52,6 @@ const colocarFichaCPU = () => {
     fichasColocadas++;
     comprueboGanador();
     turno = !turno;
-    console.log(miTablero);
-    console.log("pone ficha")
-    console.log(fichaP2)
 };
 
 const quitarFichaAleatoriaCPU = () => {
@@ -79,7 +76,6 @@ const fichaRobadaCPU = () => {
 
 const jugadaCPU = () => {
     cuentaTurno++;
-    console.log(cuentaTurno);
     alertPlay();
     cpuOcupada = true;
     for (let i = 0; i < combinacionesGanadoras.length; i++) {
@@ -90,7 +86,6 @@ const jugadaCPU = () => {
     
         if (celda1 === "O" && celda2 === "O" && celda3 === "") {
             if (fichaP2 === 0) {
-            console.log("Victoria1");
             setTimeout(quitarFichaAleatoriaCPU, Math.random() * 500);
             }
             setTimeout(() => {
@@ -140,7 +135,6 @@ const evitaVictoriaCPU = () => {
     
         if (celda1 === "X" && celda2 === "X" && celda3 === "") {
             if (fichaP2 === 0) {
-            console.log("Victoria1");
             setTimeout(quitarFichaAleatoriaCPU, Math.random() * 500);
             }
             setTimeout(() => {
@@ -177,10 +171,8 @@ const evitaVictoriaCPU = () => {
         }
         }
         if (fichaP2 !== 0) {
-            console.log("NOVictoria")
             setTimeout(colocarFichaCPU, Math.random() * (1000 - 500) + 500);
         } else if (fichaP2 === 0) {
-            console.log("Robo1")
             setTimeout(quitarFichaAleatoriaCPU, Math.random() * (800 - 500) + 500);
             setTimeout(colocarFichaCPU, Math.random() * (1500 - 800) + 800);
         }
@@ -194,7 +186,6 @@ const comprueboGanador = () => {
         let [pos1, pos2, pos3] = combinacionGanadora;
         if (miTablero[pos1] === miTablero[pos2] && miTablero[pos2] === miTablero[pos3] && miTablero[pos1] !== "") {
         
-        console.log(`Ha ganado: ${miTablero[pos1]}`);
         juegoFinalizado = true;
             if (miTablero[pos1] === 'X') {
                 sessionStorage.setItem("ganador", "X")
